@@ -15,8 +15,7 @@ using namespace {{modelNamespace}};
 
 void {{classname}}::init(size_t thr = 2) {
     auto opts = Pistache::Http::Endpoint::options()
-        .threads(thr)
-        .flags(Pistache::Tcp::Options::InstallSignalHandler);
+        .threads(thr);
     httpEndpoint->init(opts);
     setupRoutes();
 }
